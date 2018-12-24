@@ -13,7 +13,7 @@ size(X)
 % 一つの遺伝子の発現量のヒストグラム（度数分布）を可視化する。平均と標準偏差も合わせて表示する。
 
 figure
-i1 = 1; gname1 = sprintf('gene%d',i1);
+i1 = 150; gname1 = sprintf('gene%d',i1);
 hist( X(i1, :) )
 xlabel( gname1 )
 % Add mean and SD.
@@ -39,7 +39,7 @@ end
 %% Exercise 2. SCATTER PLOT
 % ２つの遺伝子の発現量散布図（scatter plot）を描きましょう
 
-i1 = 2; i2 = 3;
+i1 = 4; i2 = 5;
 figure
 plot( X(i1,:),X(i2,:),'.')
 xlabel( sprintf('gene%d',i1) )
@@ -68,7 +68,7 @@ plot( gx+m1, gy+m2, 'g-' )
 sd1 = std( X(i1, :) )
 sd2 = std( X(i2, :) )
 
-%plot( sd1*gx+m1, sd2*gy+m2, 'b-' )
+plot( sd1*gx+m1, sd2*gy+m2, 'b-' )
 
 %% Calculate variance-covariance-matrix 分散共分散行列 C を計算します
 C = cov( X([i1, i2], :)' )
